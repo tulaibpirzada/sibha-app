@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6CD8A12F66CDF30000873E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6CD8A02F66CDF30000873E /* WidgetKit.framework */; };
+		0F6CD8A32F66CDF30000873E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6CD8A22F66CDF30000873E /* SwiftUI.framework */; };
+		0F6CD8B02F66CDF50000873E /* SibhaComplicationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0F6CD89E2F66CDF30000873E /* SibhaComplicationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AA000036000000000000000A /* SibhaAppWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AA000027000000000000000A /* SibhaAppWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0F6CD8AE2F66CDF50000873E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA000001000000000000000A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F6CD89D2F66CDF30000873E;
+			remoteInfo = SibhaComplicationExtension;
+		};
 		AA000061000000000000000A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA000001000000000000000A /* Project object */;
@@ -21,6 +31,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0F6CD8B12F66CDF50000873E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0F6CD8B02F66CDF50000873E /* SibhaComplicationExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA000046000000000000000A /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,16 +56,39 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F6CD89E2F66CDF30000873E /* SibhaComplicationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SibhaComplicationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F6CD8A02F66CDF30000873E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0F6CD8A22F66CDF30000873E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		AA000023000000000000000A /* SibhaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SibhaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA000027000000000000000A /* SibhaAppWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SibhaAppWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0F6CD8B42F66CDF50000873E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0F6CD89D2F66CDF30000873E /* SibhaComplicationExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0F555C792F6586DC001DEBC5 /* SibhaApp */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SibhaApp; sourceTree = "<group>"; };
 		0F555C802F658738001DEBC5 /* SibhaAppWatch */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SibhaAppWatch; sourceTree = "<group>"; };
+		0F6CD8A42F66CDF30000873E /* SibhaComplication */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (0F6CD8B42F66CDF50000873E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SibhaComplication; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0F6CD89B2F66CDF30000873E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F6CD8A32F66CDF30000873E /* SwiftUI.framework in Frameworks */,
+				0F6CD8A12F66CDF30000873E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA000042000000000000000A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,11 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F6CD89F2F66CDF30000873E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F6CD8A02F66CDF30000873E /* WidgetKit.framework */,
+				0F6CD8A22F66CDF30000873E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA000002000000000000000A = {
 			isa = PBXGroup;
 			children = (
 				0F555C792F6586DC001DEBC5 /* SibhaApp */,
 				0F555C802F658738001DEBC5 /* SibhaAppWatch */,
+				0F6CD8A42F66CDF30000873E /* SibhaComplication */,
+				0F6CD89F2F66CDF30000873E /* Frameworks */,
 				AA000003000000000000000A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +131,7 @@
 			children = (
 				AA000023000000000000000A /* SibhaApp.app */,
 				AA000027000000000000000A /* SibhaAppWatch.app */,
+				0F6CD89E2F66CDF30000873E /* SibhaComplicationExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +139,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0F6CD89D2F66CDF30000873E /* SibhaComplicationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F6CD8B52F66CDF50000873E /* Build configuration list for PBXNativeTarget "SibhaComplicationExtension" */;
+			buildPhases = (
+				0F6CD89A2F66CDF30000873E /* Sources */,
+				0F6CD89B2F66CDF30000873E /* Frameworks */,
+				0F6CD89C2F66CDF30000873E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0F6CD8A42F66CDF30000873E /* SibhaComplication */,
+			);
+			name = SibhaComplicationExtension;
+			packageProductDependencies = (
+			);
+			productName = SibhaComplicationExtension;
+			productReference = 0F6CD89E2F66CDF30000873E /* SibhaComplicationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		AA000010000000000000000A /* SibhaApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA000055000000000000000A /* Build configuration list for PBXNativeTarget "SibhaApp" */;
@@ -112,10 +190,12 @@
 				AA000043000000000000000A /* Sources */,
 				AA000044000000000000000A /* Resources */,
 				AA000045000000000000000A /* Frameworks */,
+				0F6CD8B12F66CDF50000873E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0F6CD8AF2F66CDF50000873E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				0F555C802F658738001DEBC5 /* SibhaAppWatch */,
@@ -132,9 +212,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
+					0F6CD89D2F66CDF30000873E = {
+						CreatedOnToolsVersion = 26.3;
+					};
 					AA000010000000000000000A = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -158,11 +241,19 @@
 			targets = (
 				AA000010000000000000000A /* SibhaApp */,
 				AA000011000000000000000A /* SibhaAppWatch */,
+				0F6CD89D2F66CDF30000873E /* SibhaComplicationExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0F6CD89C2F66CDF30000873E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA000041000000000000000A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,6 +271,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0F6CD89A2F66CDF30000873E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA000040000000000000000A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +295,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0F6CD8AF2F66CDF50000873E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F6CD89D2F66CDF30000873E /* SibhaComplicationExtension */;
+			targetProxy = 0F6CD8AE2F66CDF50000873E /* PBXContainerItemProxy */;
+		};
 		AA000060000000000000000A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AA000011000000000000000A /* SibhaAppWatch */;
@@ -205,6 +308,75 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0F6CD8B22F66CDF50000873E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 38D23V5249;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SibhaComplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SibhaComplication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tulaibpirzada.sibha.watchkitapp.SibhaComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		0F6CD8B32F66CDF50000873E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 38D23V5249;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SibhaComplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SibhaComplication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tulaibpirzada.sibha.watchkitapp.SibhaComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		AA000050000000000000000A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -436,6 +608,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F6CD8B52F66CDF50000873E /* Build configuration list for PBXNativeTarget "SibhaComplicationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F6CD8B22F66CDF50000873E /* Debug */,
+				0F6CD8B32F66CDF50000873E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AA000054000000000000000A /* Build configuration list for PBXProject "SibhaApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

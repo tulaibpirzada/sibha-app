@@ -2,13 +2,11 @@ import SwiftUI
 
 struct WatchContentView: View {
     var body: some View {
-        VStack {
-            Text("السبحة")
-                .font(.title2)
+        NavigationStack {
+            SessionPickerView()
+                .navigationDestination(for: DhikrSession.self) { session in
+                    CounterView(session: session)
+                }
         }
     }
-}
-
-#Preview {
-    WatchContentView()
 }

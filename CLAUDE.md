@@ -16,16 +16,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Structure
 
 ```
-SibhaApp/              # iOS app target
-├── SibhaApp.swift       # @main entry point
-├── ContentView.swift    # Root view
+SibhaApp/                        # iOS companion app (minimal)
+├── SibhaApp.swift
+├── ContentView.swift
 └── Assets.xcassets/
 
-SibhaAppWatch/         # watchOS app target
-├── SibhaAppWatch.swift  # @main entry point
-├── WatchContentView.swift
+SibhaAppWatch/                   # watchOS app (primary product)
+├── SibhaAppWatch.swift          # @main
+├── WatchContentView.swift       # NavigationStack root → SessionPickerView
+├── Models/
+│   ├── Dhikr.swift              # arabic, transliteration, target count
+│   └── DhikrSession.swift       # ordered list of Dhikr + static presets
+├── ViewModels/
+│   └── CounterViewModel.swift   # count state, haptics, auto-advance (@Observable)
+├── Views/
+│   ├── SessionPickerView.swift  # list of presets, navigates to CounterView
+│   ├── CounterView.swift        # active counter — Double Tap + full-screen tap
+│   └── CompletionView.swift     # shown on session complete
 └── Assets.xcassets/
 ```
+
+### Watch App Navigation Flow
+`SessionPickerView` → (select session) → `CounterView` → (all dhikr done) → `CompletionView` (overlay) → dismiss back to picker
+
+### Key Patterns
+- **Double Tap input**: `.handGestureShortcut(.primaryAction)` on the counter `Button` (watchOS 10+)
+- **Haptics**: `WKInterfaceDevice.current().play(.click)` per tap, `.success` on dhikr/session complete
+- **Auto-advance**: 0.8s delay after target reached, then moves to next dhikr in sequence
+- **`@Observable`** used for `CounterViewModel` (Swift 5.9 / watchOS 10+)
 
 ## Targets
 
